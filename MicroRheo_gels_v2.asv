@@ -26,10 +26,10 @@ definput = {'3e-6','37','y'...
     '19.9; 66.3; 332'};
 Inputs = (inputdlg(prompt,dlgtitle,dims,definput));
 
-a = str2num(cell2mat(Inputs(1)));
-Temp = str2num(cell2mat(Inputs(2)));
-filterCondition = Inputs(3);
-bandstopfrequencies = str2num(cell2mat(Inputs(4)));
+a = str2num(cell2mat(Inputs(3)));
+Temp = str2num(cell2mat(Inputs(4)));
+filterCondition = Inputs(5);
+bandstopfrequencies = str2num(cell2mat(Inputs(6)));
 
 figure;
 tiledlayout(3,2)
