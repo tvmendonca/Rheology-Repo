@@ -11,7 +11,7 @@ close all
 [~,name] = fileparts(DataDir);
 data = bead_loadData(name);
 [Path,name] = fileparts(DataDir);
-RFolder = strcat(Path,'\MSD2\');
+RFolder = strcat(Path,'\MSD\');
 
 data = bead_preProcessCentres(data);
 data = bead_normMSD(data, 'doPlots', false);
