@@ -1,0 +1,27 @@
+stage = mmc.getXYStageDevice();
+
+props = mmc.getDevicePropertyNames(stage);
+propString = "";
+for (prop: props) 
+   propString += prop + ", ";
+mm.scripter().message(propString);
+
+//Acceleration-AC(ms), AxisLetterX, AxisLetterY, 
+//Backlash-B, BuildName, 
+//CompileDate, 
+//Description, 
+//EnableAdvancedProperties, Error-E(nm), 
+//FinishError-PCROS(nm), 
+//JoyStick Fast Speed, JoyStick Reverse, JoyStick Slow Speed, 
+//Maximum Speed (Do Not Change), 
+//MotorOnOff, 
+//Name, 
+//OnlySendSerialCommandOnChange, OverShoot(um), 
+//Port, 
+//SerialCommand, SerialResponse, Speed-S, StepSizeX_um, StepSizeY_um, 
+//TransposeMirrorX, TransposeMirrorY, 
+//VectorMoveX-VE(mm/s), VectorMoveY-VE(mm/s), Version, 
+//Wait_Cycles, 
+
+val = mmc.getProperty(stage,"StepSizeX_um");
+print(val)

@@ -1,0 +1,18 @@
+stage = mmc.getXYStageDevice();
+step = 1; //step size in um
+mmc.setProperty(stage,"StepSizeX_um",1); //Set backlash to 0
+mm.app().refreshGUIFromCache();
+v = mmc.getProperty(stage,"StepSizeX_um"); print(v);
+mmc.setProperty(stage,"Backlash-B","0"); //Set backlash to 0
+mm.app().refreshGUIFromCache();
+
+//double [] X, Y;
+//X = Y = new double[1];
+startX = mmc.getXPosition();
+startY = mmc.getYPosition();
+//X2 = mmc.getXYStagePosition();
+//newX = X[0]+1; 
+//print(startY);
+newX = startX+1; 
+mmc.setXYPosition(stage, newX, startY);
+
